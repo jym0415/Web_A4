@@ -14,17 +14,17 @@ a{text-decoration: none; font-family: "맑은고딕",sans-serif; color: #333333;
 .justify-between{justify-content: space-between;}
 .align-center{align-items: center;}
 .h100{height: 100px;}
-.h200{height: 200px;}ㄴ
+.h200{height: 200px;}
 .h300{height: 300px;}
 .ofh{overflow: hidden;}
 
 /*header*/
-#hd{align-items: end;}
+#hd{align-items: end; 
+    background-color: rgb(227, 228, 230);}
 .d1a{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    border: 1px solid rgb(75, 75, 75);
     line-height: 2;
     min-width: 120px;
 
@@ -63,7 +63,7 @@ a{text-decoration: none; font-family: "맑은고딕",sans-serif; color: #333333;
     overflow: hidden;
     transition: height 0.5s;
     position: absolute;
-    top: 100px; left: 0; right: 0;
+    top: 100%; left: 0; right: 0;
     z-index: 99;
     background-color:  rgb(134, 133, 133)    
 }
@@ -71,18 +71,87 @@ a{text-decoration: none; font-family: "맑은고딕",sans-serif; color: #333333;
 #gnb:hover:after{
     height: 120px;  
 }
-
 /*slider*/
+#slider{height: 300px;}
 
 #slider li{
     opacity: 0;
     visibility: hidden;
     width: 100%; height: 100%;
     left: 0; right: 0;
-    transition: 0.5s;
+    transition: 0.8s;
 
 }
 #slider li.show{
     opacity: 1;
     visibility: visible;
+}
+
+/*content*/
+#content > div {width: 33.333%;}
+#content h3{
+    line-height: 3;
+    cursor: pointer;
+    padding: 0 5px;
+}
+#content h3:hover{
+    background-color: rgb(245, 245, 130);
+}
+
+.notice li{
+    padding: 0 10px;
+    display: flex;
+    line-height: 2;
+    white-space: nowrap;
+    font-size: 16px;
+    justify-content: space-between;
+}
+.notice a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+.notice li:hover {
+    font-weight: bold;
+}
+
+.gallery img{
+    width: 90%;
+}
+.gallery ul{
+    justify-content: space-around;
+    padding: 0 10px;
+}
+.link img{width: 100%; height: 100%;}
+
+/*ft*/
+#ft{background-color:  rgb(184, 182, 182);}
+
+.ftleft{width: 70%;}
+.ftmenu{padding: 0 10px;
+    line-height: 2;}
+.ftmenu ul{justify-content: space-between;}
+.ftmenu p{text-align: center;}
+
+.f_site{width: 30%; text-align: end;
+        padding: 0 10px;}
+#f_famaily {padding: 10px;}
+
+/*popup*/
+.popup{
+    background-color: white;
+    border: 1px solid black;
+    line-height: 2;
+    padding: 10px;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+
+}
+.popup h3{
+    border-bottom: 1px solid #333;
+}
+.popup button{
+    padding: 10px;
+    float: right;
 }
