@@ -1,0 +1,88 @@
+*{margin: 0; padding: 0;}
+li,ul{list-style: none;}
+a{text-decoration: none; font-family: "맑은고딕",sans-serif; color: #333333;}
+
+/*공통*/
+.container{width: 1200px;}
+.m-auto{margin: 0 auto;}
+.abs{position: absolute;}
+.rel{position: relative;}
+.d-flex{display: flex;}
+.d-none{display: none;}
+.d-block{display: block;}
+.w-100{width: 100%;}
+.justify-between{justify-content: space-between;}
+.align-center{align-items: center;}
+.h100{height: 100px;}
+.h200{height: 200px;}ㄴ
+.h300{height: 300px;}
+.ofh{overflow: hidden;}
+
+/*header*/
+#hd{align-items: end;}
+.d1a{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgb(75, 75, 75);
+    line-height: 2;
+    min-width: 120px;
+
+}
+.d1a:hover{
+    background-color: rgb(75, 75, 75);
+    color: white;
+}
+.d2ul{
+    z-index: 1000;
+    height: 0;
+    top: 100%;
+    left: 0; right: 0;
+    transition: height 0.5s;
+    line-height: 2;
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(134, 133, 133);
+}
+.d2ul a{color: white;}
+
+#gnb:hover .d2ul{
+    height: 120px;
+}
+.d2ul li:hover {
+    background-color: white;
+}
+.d2ul li:hover a{
+    color: #333;
+}
+
+#gnb:after{
+    content: '';
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+    position: absolute;
+    top: 100px; left: 0; right: 0;
+    z-index: 99;
+    background-color:  rgb(134, 133, 133)    
+}
+
+#gnb:hover:after{
+    height: 120px;  
+}
+
+/*slider*/
+
+#slider li{
+    opacity: 0;
+    visibility: hidden;
+    width: 100%; height: 100%;
+    left: 0; right: 0;
+    transition: 0.5s;
+
+}
+#slider li.show{
+    opacity: 1;
+    visibility: visible;
+}
